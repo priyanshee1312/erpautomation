@@ -1,0 +1,7 @@
+frappe
+india_compliance
+erpnext
+hrms
+payments
+automation
+onboarding_management

@@ -1,0 +1,110 @@
+2024-10-21 05:43:22,348 DEBUG cd frappe-bench && python3 -m venv env
+2024-10-21 05:43:26,263 DEBUG cd frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-10-21 05:43:29,187 DEBUG cd frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet wheel
+2024-10-21 05:43:36,051 LOG Getting frappe
+2024-10-21 05:43:36,051 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch v14.55.1 --depth 1 --origin upstream
+2024-10-21 05:44:07,090 LOG Installing frappe
+2024-10-21 05:44:07,090 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/frappe 
+2024-10-21 05:47:14,418 DEBUG cd /workspace/development/frappe-bench/apps/frappe && yarn install
+2024-10-21 05:47:36,128 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-10-21 05:47:36,128 DEBUG cd frappe-bench && bench build
+2024-10-21 05:47:36,269 INFO /home/frappe/.local/bin/bench build
+2024-10-21 05:47:52,721 LOG setting up backups
+2024-10-21 05:47:52,729 LOG backups were set up
+2024-10-21 05:47:52,729 INFO Bench frappe-bench initialized
+2024-10-21 05:47:53,115 INFO A newer version of bench is available: 5.19.0 → 5.22.9
+2024-10-21 05:47:54,168 INFO /home/frappe/.local/bin/bench set-config -g db_host mariadb
+2024-10-21 05:47:55,688 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2024-10-21 05:47:56,975 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2024-10-21 05:47:58,268 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-socketio:6379
+2024-10-21 05:47:59,559 INFO /home/frappe/.local/bin/bench set-config -g developer_mode 1
+2024-10-21 05:48:01,433 INFO /home/frappe/.local/bin/bench set-config -g webhook_proxy_url https://smee.io/3aUuGbWeRkMrmxOz
+2024-10-21 05:48:02,723 INFO /home/frappe/.local/bin/bench get-app --branch v14.25.0 --resolve-deps https://github.com/frappe/erpnext.git
+2024-10-21 05:48:03,253 LOG Getting erpnext
+2024-10-21 05:48:03,253 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch v14.25.0 --depth 1 --origin upstream
+2024-10-21 05:48:43,454 LOG Installing erpnext
+2024-10-21 05:48:43,592 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/erpnext 
+2024-10-21 05:49:42,421 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade hypothesis~=6.31.0 
+2024-10-21 05:49:45,021 DEBUG cd /workspace/development/frappe-bench/apps/erpnext && yarn install
+2024-10-21 05:49:45,658 DEBUG bench build --app erpnext
+2024-10-21 05:49:45,765 INFO /home/frappe/.local/bin/bench build --app erpnext
+2024-10-21 05:49:51,794 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-10-21 05:49:51,900 INFO A newer version of bench is available: 5.19.0 → 5.22.9
+2024-10-21 05:49:52,622 INFO /home/frappe/.local/bin/bench get-app --branch version-14 payments
+2024-10-21 05:49:53,044 LOG Getting payments
+2024-10-21 05:49:53,044 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git --branch version-14 --depth 1 --origin upstream
+2024-10-21 05:49:53,915 LOG Installing payments
+2024-10-21 05:49:54,023 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/payments 
+2024-10-21 05:49:57,349 DEBUG bench build --app payments
+2024-10-21 05:49:57,428 INFO /home/frappe/.local/bin/bench build --app payments
+2024-10-21 05:50:01,906 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-10-21 05:50:02,070 INFO A newer version of bench is available: 5.19.0 → 5.22.9
+2024-10-21 05:50:02,381 INFO /home/frappe/.local/bin/bench get-app --branch v14.3.3 https://github.com/frappe/hrms.git
+2024-10-21 05:50:02,385 LOG Getting hrms
+2024-10-21 05:50:02,385 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git --branch v14.3.3 --depth 1 --origin upstream
+2024-10-21 05:50:03,948 LOG Installing hrms
+2024-10-21 05:50:04,059 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/hrms 
+2024-10-21 05:50:05,535 DEBUG bench build --app hrms
+2024-10-21 05:50:05,616 INFO /home/frappe/.local/bin/bench build --app hrms
+2024-10-21 05:50:10,261 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-10-21 05:50:10,429 INFO A newer version of bench is available: 5.19.0 → 5.22.9
+2024-10-21 05:50:10,952 INFO /home/frappe/.local/bin/bench get-app --branch v14.7.0 https://github.com/resilient-tech/india-compliance.git
+2024-10-21 05:50:10,957 LOG Getting india-compliance
+2024-10-21 05:50:10,957 DEBUG cd ./apps && git clone https://github.com/resilient-tech/india-compliance.git --branch v14.7.0 --depth 1 --origin upstream
+2024-10-21 05:50:12,566 LOG Installing india_compliance
+2024-10-21 05:50:12,676 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/india_compliance 
+2024-10-21 05:50:19,986 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade parameterized~=0.8.1 responses~=0.21.0 
+2024-10-21 05:50:20,995 DEBUG bench build --app india_compliance
+2024-10-21 05:50:21,073 INFO /home/frappe/.local/bin/bench build --app india_compliance
+2024-10-21 05:50:26,037 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-10-21 05:50:32,199 INFO A newer version of bench is available: 5.19.0 → 5.22.9
+2024-10-24 07:28:57,324 INFO /home/frappe/.local/bin/bench new-site erpnext.localhost
+2024-10-24 07:30:11,624 INFO /home/frappe/.local/bin/bench new-site erpnext.localhost --admin-password erpnext --mariadb-root-password erpnext --no-mariadb-socket
+2024-10-24 07:30:27,053 INFO /home/frappe/.local/bin/bench new-site erpnext.localhost
+2024-10-24 07:30:51,690 INFO /home/frappe/.local/bin/bench use erpnext.localhost
+2024-10-24 07:31:00,767 INFO /home/frappe/.local/bin/bench start
+2024-10-24 07:31:01,035 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-10-24 07:31:01,050 INFO /home/frappe/.local/bin/bench worker
+2024-10-24 07:31:01,054 INFO /home/frappe/.local/bin/bench schedule
+2024-10-24 07:31:01,055 INFO /home/frappe/.local/bin/bench watch
+2024-10-24 07:31:51,184 INFO /home/frappe/.local/bin/bench new-site erpnext_automation.localhost
+2024-10-24 07:32:58,418 INFO /home/frappe/.local/bin/bench use erpnext_automation.localhost
+2024-10-24 07:33:28,357 INFO /home/frappe/.local/bin/bench install-app erpnext
+2024-10-24 07:44:01,056 INFO /home/frappe/.local/bin/bench install-app hrms
+2024-10-24 07:44:56,591 INFO /home/frappe/.local/bin/bench start
+2024-10-24 07:44:56,807 INFO /home/frappe/.local/bin/bench worker
+2024-10-24 07:44:56,808 INFO /home/frappe/.local/bin/bench watch
+2024-10-24 07:44:56,820 INFO /home/frappe/.local/bin/bench schedule
+2024-10-24 07:44:56,830 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-10-24 07:46:33,932 INFO /home/frappe/.local/bin/bench start
+2024-10-24 07:46:34,150 INFO /home/frappe/.local/bin/bench worker
+2024-10-24 07:46:34,162 INFO /home/frappe/.local/bin/bench schedule
+2024-10-24 07:46:34,185 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-10-24 07:46:34,188 INFO /home/frappe/.local/bin/bench watch
+2024-10-24 09:06:05,106 INFO /home/frappe/.local/bin/bench start
+2024-10-24 09:06:05,324 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-10-24 09:06:05,335 INFO /home/frappe/.local/bin/bench watch
+2024-10-24 09:06:05,336 INFO /home/frappe/.local/bin/bench schedule
+2024-10-24 09:06:05,346 INFO /home/frappe/.local/bin/bench worker
+2024-10-24 11:39:40,710 INFO /home/frappe/.local/bin/bench --site erpnext_automation.localhost backup
+2024-10-24 12:05:51,083 INFO /home/frappe/.local/bin/bench new-app automation
+2024-10-24 12:05:51,088 LOG creating new app automation
+2024-10-24 12:06:33,932 LOG Installing automation
+2024-10-24 12:06:33,933 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/automation 
+2024-10-24 12:06:35,476 DEBUG bench build --app automation
+2024-10-24 12:06:35,565 INFO /home/frappe/.local/bin/bench build --app automation
+2024-10-24 12:06:37,358 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-10-24 12:06:37,542 INFO A newer version of bench is available: 5.19.0 → 5.22.9
+2024-10-24 12:09:58,348 INFO /home/frappe/.local/bin/bench --site erpnext_automation.localhost install-app automation
+2024-10-24 12:15:12,195 INFO /home/frappe/.local/bin/bench new-app onboarding_management
+2024-10-24 12:15:12,200 LOG creating new app onboarding_management
+2024-10-24 12:15:48,199 LOG Installing onboarding_management
+2024-10-24 12:15:48,200 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/onboarding_management 
+2024-10-24 12:15:49,695 DEBUG bench build --app onboarding_management
+2024-10-24 12:15:49,791 INFO /home/frappe/.local/bin/bench build --app onboarding_management
+2024-10-24 12:15:51,669 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-10-24 12:15:51,841 INFO A newer version of bench is available: 5.19.0 → 5.22.9
+2024-10-24 12:19:04,046 INFO /home/frappe/.local/bin/bench --site library.localhost install-app onboarding_management
+2024-10-24 12:20:03,202 INFO /home/frappe/.local/bin/bench --site erpnext_automation.localhost install-app onboarding_management
+2024-10-24 12:20:13,243 INFO /home/frappe/.local/bin/bench --site erpnext_automation.localhost install-app onboarding_management
+2024-10-24 12:20:37,003 INFO /home/frappe/.local/bin/bench --site erpnext_automation.localhost list-apps
